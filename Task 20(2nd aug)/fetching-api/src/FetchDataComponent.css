@@ -1,0 +1,55 @@
+/* src/FetchDataComponent.css */
+.fetch-data-component {
+    text-align: center;
+    margin-top: 50px;
+    font-family: Arial, sans-serif;
+  }
+  
+  .loader {
+    font-size: 1.5em;
+    color: #007bff;
+  }
+  
+  .card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  .card {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 300px;
+    transition: transform 0.3s;
+  }
+  
+  .card:hover {
+    transform: scale(1.05);
+  }
+  
+  .card h2 {
+    margin: 0 0 10px;
+    font-size: 1.25em;
+    color: #333;
+  }
+  
+  .card p {
+    font-size: 1em;
+    color: #666;
+  }
+  
+  .error {
+    color: red;
+    font-weight: bold;
+    font-size: 1.2em;
+  }
+  
+  .completion-message {
+    margin-top: 20px;
+    font-size: 1.2em;
+    color: green;
+  }
+  

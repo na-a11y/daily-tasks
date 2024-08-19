@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>User Registration Form</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"
+    ></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+  </head>
+
+  <body>
+    <div class="container">
+      <h2>User Registration Form</h2>
+      <form id="registrationForm" class="input-row">
+        <label for="fullName">Full Name:</label>
+        <input
+          type="text"
+          id="fullName"
+          name="fullName"
+          placeholder="Enter your full name"
+        />
+        <div id="fullNameError" class="error-message"></div>
+
+        <label for="username">Username:</label>
+        <input
+          type="text"
+          id="username"
+          name="username"
+          placeholder="Enter your username"
+        />
+        <div id="usernameError" class="error-message"></div>
+
+        <label for="password">Password:</label>
+        <input
+          type="password"
+          id="password"
+          name="password"
+          placeholder="Enter your password"
+        />
+        <div id="passwordError" class="error-message"></div>
+
+        <div id="recaptcha-container"></div>
+        <!-- reCAPTCHA container -->
+        <div id="recaptchaError" class="error-message"></div>
+
+        <button type="button" onclick="validateBasicInfo()">Next</button>
+      </form>
+
+      <form id="emailOtpSection" class="otp-section" style="display: none">
+        <label for="email">Email:</label>
+        <div class="otp-row">
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="Enter your email"
+          />
+          <button type="button" onclick="sendEmailOTP()">Send Email OTP</button>
+        </div>
+        <div id="emailError" class="error-message"></div>
+
+        <label for="emailOtp">Email OTP:</label>
+        <div class="otp-row">
+          <input
+            type="text"
+            id="emailOtp"
+            name="emailOtp"
+            placeholder="Enter OTP"
+          />
+          <button type="button" onclick="validateEmailOTP()">
+            Validate Email OTP
+          </button>
+        </div>
+        <div id="emailOtpError" class="error-message"></div>
+      </form>
+
+      <form id="mobileOtpSection" class="otp-section" style="display: none">
+        <label for="mobile">Mobile Number:</label>
+        <div class="otp-row">
+          <input
+            type="tel"
+            id="mobile"
+            name="mobile"
+            placeholder="Enter your mobile number"
+          />
+          <button type="button" onclick="sendMobileOTP()">
+            Send Mobile OTP
+          </button>
+        </div>
+        <div id="mobileError" class="error-message"></div>
+
+        <label for="mobileOtp">Mobile OTP:</label>
+        <div class="otp-row">
+          <input
+            type="text"
+            id="mobileOtp"
+            name="mobileOtp"
+            placeholder="Enter OTP"
+          />
+          <button type="button" onclick="validateMobileOTP()">
+            Validate Mobile OTP
+          </button>
+        </div>
+        <div id="mobileOtpError" class="error-message"></div>
+      </form>
+
+      <div id="message"></div>
+
+      <button
+        id="showTableButton"
+        style="display: none"
+        onclick="redirectToUserTable()"
+      >
+        Show User Table
+      </button>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

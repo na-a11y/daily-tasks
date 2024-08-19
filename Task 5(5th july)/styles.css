@@ -1,0 +1,117 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f0f8ff; /* Light blue background for a flower theme */
+    color: #333;
+}
+
+header {
+    background-color: #ff69b4; /* Pink background for the header */
+    color: white;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+.logo {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.container {
+    display: flex;
+}
+
+.sidebar {
+    background-color: #98fb98; /* Pale green background for the sidebar */
+    width: 20%;
+    padding: 20px;
+}
+
+.sidebar h2 {
+    color: #333;
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    margin: 10px 0;
+    color: #333;
+}
+
+.sidebar ul li::before {
+    content: '🌸 '; /* Flower icon before each list item */
+}
+
+.content {
+    background-color: white;
+    color: #333;
+    width: 80%;
+    padding: 20px;
+}
+
+footer {
+    background-color: #ff69b4; /* Pink background for the footer */
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .container {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .content {
+        width: 100%;
+        padding: 10px;
+    }
+
+    footer {
+        position: static;
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo {
+        font-size: 1.2em;
+    }
+
+    .sidebar h2 {
+        font-size: 1.2em;
+    }
+
+    .sidebar ul li {
+        font-size: 0.9em;
+    }
+
+    .content h2 {
+        font-size: 1.2em;
+    }
+
+    .content p {
+        font-size: 0.9em;
+    }
+}
