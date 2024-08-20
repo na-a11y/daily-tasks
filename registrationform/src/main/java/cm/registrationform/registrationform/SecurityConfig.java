@@ -22,7 +22,7 @@ public class SecurityConfig {
             .csrf(AbstractHttpConfigurer::disable) // Disable CSRF
             .sessionManagement(session -> session.sessionCreationPolicy(SessionCreationPolicy.STATELESS)) // Stateless sessions
             .authorizeHttpRequests(authz -> authz
-                .requestMatchers("/api/users/**").permitAll() // Allow all requests to /api/users
+                .requestMatchers("/api/users/**").permitAll() // it Allows all of the requests to /api/users
                 .anyRequest().authenticated() // Require authentication for other requests
             );
 
