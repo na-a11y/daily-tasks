@@ -1,0 +1,80 @@
+/* Container styling for PostDetail */
+.post-detail-container {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Title and content */
+.post-detail h2 {
+  font-size: 32px;
+  color: #007acc;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+.post-detail p {
+  font-size: 18px;
+  color: #333;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.post-author {
+  font-size: 16px;
+  color: #555;
+  font-style: italic;
+  margin-bottom: 30px;
+}
+
+/* Centering the button group and adding space above */
+.button-group {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 40px; /* Space added above the buttons */
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #007acc;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-weight: bold;
+}
+
+button:hover {
+  background-color: #005f99;
+}
+
+button a {
+  text-decoration: none;
+  color: white;
+}
+
+button a:hover {
+  text-decoration: none;
+}
+
+/* General layout and spacing */
+.post-detail {
+  text-align: left;
+}
+
+@media (max-width: 768px) {
+  .post-detail-container {
+    padding: 10px;
+  }
+
+  .button-group {
+    flex-direction: column;
+    align-items: center;
+  }
+}
